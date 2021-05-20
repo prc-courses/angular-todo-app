@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Mechanic",
+      "description": "Oh my god, the car will get me bankrupt...",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Schedule holidays",
+      "description": "Or else I'll be homeless soon, she sais...",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Pay mortgage",
+      "description": "Or else... Nevermind...",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Go to bank",
+      "description": "Talk to the manager to check credit possibilities",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "title": "Supermarket",
+      "description": "Bread, butter, onions, bacon, cognac, beer",
+      "completed": false
+    }
+  ]
+}
