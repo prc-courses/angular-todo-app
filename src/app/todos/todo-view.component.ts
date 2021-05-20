@@ -34,7 +34,7 @@ export class TodoView implements OnInit {
     this.route.params.subscribe(params => {
       this.id = params['id'];
       this.todosService.getTodo(this.id)
-        .then(todo => {
+        .subscribe(todo => {
           this.thisTodo = todo;
         });
     });
@@ -51,7 +51,7 @@ export class TodoView implements OnInit {
 
   saveTodo(todo: Todo) {
     this.todosService.saveTodo(todo)
-      .then(responseTodo => {
+      .subscribe(responseTodo => {
         this.router.navigate(['/todos']);
       });
 

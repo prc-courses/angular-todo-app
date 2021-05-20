@@ -16,13 +16,11 @@ export class TodosService {
   constructor(private http: HttpClient) {}
 
   loadTodos() {
-    return this.http.get<Todo[]>(BASE_URL)
-      .toPromise();
+    return this.http.get<Todo[]>(BASE_URL);
   }
 
   getTodo(id: number) {
-    return this.http.get<Todo>(BASE_URL + id.toString())
-      .toPromise();
+    return this.http.get<Todo>(BASE_URL + id.toString());
   }
 
   saveTodo(item: Todo) {
@@ -30,17 +28,14 @@ export class TodosService {
   }
 
   createTodo(item: Todo) {
-    return this.http.post<Todo>(`${BASE_URL}`, item, HEADER)
-      .toPromise();
+    return this.http.post<Todo>(`${BASE_URL}`, item, HEADER);
   }
 
   updateTodo(item: Todo) {
-    return this.http.put<Todo>(`${BASE_URL}${item.id}`, item, HEADER)
-      .toPromise();
+    return this.http.put<Todo>(`${BASE_URL}${item.id}`, item, HEADER);
   }
 
   deleteTodo(item: Todo) {
-    return this.http.delete(`${BASE_URL}${item.id}`)
-      .toPromise();
+    return this.http.delete<Todo>(`${BASE_URL}${item.id}`);
   }
 }

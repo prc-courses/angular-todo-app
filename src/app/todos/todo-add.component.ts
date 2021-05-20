@@ -41,7 +41,7 @@ export class TodoAdd implements OnInit {
 
   saveTodo(todo: Todo) {
     this.todosService.saveTodo(todo)
-      .then(responseTodo => {
+      .subscribe(responseTodo => {
         this.router.navigate(['/todos']);
       });
 

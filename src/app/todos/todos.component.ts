@@ -34,7 +34,7 @@ export class Todos implements OnInit {
       if(params['filter']) this.filter = params['filter'];
     });
     this.todosService.loadTodos()
-      .then(todos => {
+      .subscribe(todos => {
         this.todos = todos;
       });
   }
@@ -51,7 +51,7 @@ export class Todos implements OnInit {
 
   saveTodo(todo: Todo) {
     this.todosService.saveTodo(todo)
-      .then(responseTodo => {
+      .subscribe(responseTodo => {
         if (todo.id) {
           this.replaceTodo(responseTodo);
         } else {
@@ -78,7 +78,7 @@ export class Todos implements OnInit {
 
   deleteTodo(todo: Todo) {
     this.todosService.deleteTodo(todo)
-      .then(() => {
+      .subscribe(() => {
         this.todos.splice(this.todos.indexOf(todo), 1);
         this.resetTodo();
       });
